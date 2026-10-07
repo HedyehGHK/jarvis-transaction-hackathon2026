@@ -1,0 +1,17 @@
+package main.java.com.model;
+
+public enum RejectReason {
+    INVALID_ACCOUNT("INVALID ACCOUNT"),
+    INACTIVE_ACCOUNT("ACCOUNT NOT ACTIVE"),
+    INVALID_AMOUNT("INVALID AMOUNT"),
+    DUPLICATE_TRANSACTION("DUPLICATE TRANSACTION ID"),
+    INSUFFICIENT_FUNDS("INSUFFICIENT FUNDS"),
+    UNSUPPORTED_TYPE("UNSUPPORTED TRANSACTION TYPE"),
+    INVALID_TIMESTAMP("INVALID TIMESTAMP"),
+    SAME_ACCOUNT_TRANSFER("TRANSFER TO SAME ACCOUNT"),
+    MALFORMED_RECORD("MALFORMED RECORD");
+
+    private final String label;
+    RejectReason(String label) { this.label = label; }
+    public String label() { return label; }
+}
